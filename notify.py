@@ -26,8 +26,8 @@ def tgbot(token, chat_id, title, message):
 
 
 def send_mail(address, code, subject, content):
-    smtp_server = 'smtp.qq.com'
-    smtp_port = 587
+    smtp_server = 'smtp.163.com'
+    smtp_port = 465
 
     # Create a message
     msg = MIMEMultipart()
