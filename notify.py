@@ -32,7 +32,7 @@ def send_mail(address, code, subject, content):
     # Create a message
     msg = MIMEMultipart()
     msg['From'] = address
-    msg['To'] = address
+    msg['To'] = 1634222787@qq.com
     msg['Subject'] = subject
     msg.attach(content)
 
