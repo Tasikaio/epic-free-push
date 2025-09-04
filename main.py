@@ -124,7 +124,7 @@ An error has occurred. Here is the traceback:
 '''.format(error)
 
 if config.get('ADDRESS') and config.get('CODE'):
-    send_mail(config['ADDRESS'], config['CODE'], config['NOTIFY_TITLE'], mail_content)
+    send_mail(config['ADDRESS'], config['CODE'], config['NOTIFY_TITLE'], config['RECEIVE'], mail_content)
 if config.get('GOTIFY_URL') and config.get('GOTIFY_TOKEN'):
     gotify(config['GOTIFY_URL'], config['GOTIFY_TOKEN'], config['NOTIFY_TITLE'], markdown_content)
 if config.get('TGBOT_TOKEN') and config.get('TGBOT_CHAT_ID'):
