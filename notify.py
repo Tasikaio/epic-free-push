@@ -25,14 +25,14 @@ def tgbot(token, chat_id, title, message):
     print(response.json())
 
 
-def send_mail(address, code, subject, content):
+def send_mail(address, code, subject, content, receive):
     smtp_server = 'smtp.163.com'
     smtp_port = 25
 
     # Create a message
     msg = MIMEMultipart()
     msg['From'] = address
-    msg['To'] = 1634222787@qq.com
+    msg['To'] = receive
     msg['Subject'] = subject
     msg.attach(content)
 
