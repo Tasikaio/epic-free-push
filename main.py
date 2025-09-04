@@ -102,7 +102,7 @@ try:
     games = sorted(games, key=lambda game: game['upcoming'])
 
     env = Environment(loader=FileSystemLoader(path.dirname(__file__)))
-    mail_content = MIMEText(env.get_template('templates/mail.html').render(games=games), 'html')
+    mail_content = env.get_template('templates/mail.html').render(games=games)
     markdown_content = env.get_template('templates/markdown.md').render(games=games)
     tg_bot_content = env.get_template('templates/tgbot.md').render(games=games)
 except Exception as e:

@@ -1,4 +1,5 @@
 from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
 import smtplib
 import requests
 
@@ -34,7 +35,7 @@ def send_mail(address, code, subject, content, receive):
     msg['From'] = address
     msg['To'] = receive
     msg['Subject'] = subject
-    msg.attach(content)
+    msg.attach(MIMEText(content, 'html', 'utf-8'))
 
     # Connect to SMTP server
     server = smtplib.SMTP(smtp_server, smtp_port)
