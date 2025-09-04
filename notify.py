@@ -42,7 +42,7 @@ def send_mail(address, code, subject, content, receive):
     server.login(address, code)
 
     # Send the email
-    server.sendmail(address, address, msg.as_string())
+    server.sendmail(address, receive, msg.as_string())
 
     # Close the SMTP connection
     server.quit()
